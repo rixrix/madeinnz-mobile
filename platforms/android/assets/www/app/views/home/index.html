@@ -1,0 +1,43 @@
+<div class="max-width">
+    <div id="sideNav">
+        <nav class="site">
+            <ul>
+                <li class="selected"><a href="#/">Home</a></li>
+                <li><a href="#/about">About</a></li>
+            </ul>
+            <div id="pageNav"></div>
+        </nav>
+    </div>
+</div>
+<div id="site">
+    <header id="main-header">
+        <div class="max-width">
+            <hgroup>
+                <h1>Made in NZ</h1>
+                <p>A collection of internet companies made in NZ</p>
+            </hgroup>
+            <a id="slide-menu-button" class="topcoat-icon-button--large--quiet">
+                <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+            </a>
+        </div>
+    </header>
+    <div id="content" class="max-width" ng-controller="HomeController" style="padding: 20px 0;">
+        <article id="search-input" class="component">
+            <section class="component">
+                <input type="search" value="" placeholder="search" class="topcoat-search-input" ng-model="query" style="width: 95%;margin-left:10px;">
+            </section>
+        </article>
+        <article id="list" class="component">
+            <section class="component">
+                <div class="topcoat-list__container">
+                    <ul class="topcoat-list list">
+                        <li class="topcoat-list__item" ng-repeat="company in companies | filter:query">
+                            <h3>{{ company.name }}</h3>
+                            <span style="color: #58C0FF;" ng-click="showInAppBrowser(company.url);">{{ company.url }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </div>
+</div>
