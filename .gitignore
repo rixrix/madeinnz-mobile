@@ -7,3 +7,4 @@ platforms/android/gen/*
 platforms/android/out/*
 platforms/android/res/xml/config.xml
 platforms/ios/MadeInNZ/config.xml
+platforms/android/gen/*
