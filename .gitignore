@@ -1,0 +1,5 @@
+.cordova
+platforms/android/bin/*
+.idea
+*.apk
+*.app
