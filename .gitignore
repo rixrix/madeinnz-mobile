@@ -5,3 +5,5 @@ platforms/android/gen/*
 *.apk
 *.app
 platforms/android/out/*
+platforms/android/res/xml/config.xml
+platforms/ios/MadeInNZ/config.xml
