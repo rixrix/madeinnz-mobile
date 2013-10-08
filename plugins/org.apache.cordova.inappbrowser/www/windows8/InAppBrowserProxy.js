@@ -1,4 +1,4 @@
-cordova.define("org.apache.cordova.core.inappbrowser.InAppBrowserProxy", function(require, exports, module) {  /*
+cordova.define("org.apache.cordova.inappbrowser.InAppBrowserProxy", function(require, exports, module) {  /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,7 +19,7 @@ cordova.define("org.apache.cordova.core.inappbrowser.InAppBrowserProxy", functio
  *
 */
 
-/*global Windows:true */  
+/*global Windows:true */
 
 
 
@@ -89,12 +89,7 @@ var IAB = {
             window.location = strUrl;
         }
 
-
-
-        
-
         //var object = new WinJS.UI.HtmlControl(elem, { uri: strUrl });
-
 
     },
 
@@ -108,10 +103,7 @@ var IAB = {
     }
 };
 
-
-
-
 module.exports = IAB;
 
 
-require("cordova/commandProxy").add("InAppBrowser",IAB);});
+require("cordova/windows8/commandProxy").add("InAppBrowser",module.exports);
