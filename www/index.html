@@ -14,7 +14,34 @@
     <![endif]-->
 </head>
 <body class="light">
-<div id="wrapper" ng-controller="HomeController" ng-view>
+<div id="wrapper">
+    <div class="max-width">
+        <div id="sideNav">
+            <nav class="site">
+                <ul>
+                    <li class="selected"><a href="#/">Home</a></li>
+                    <li><a href="#/about">About</a></li>
+                </ul>
+                <div id="pageNav"></div>
+            </nav>
+        </div>
+    </div>
+    <div id="site">
+        <header id="main-header">
+            <div class="max-width">
+                <hgroup>
+                    <h1>Made in NZ</h1>
+                    <p>A collection of internet companies made in NZ</p>
+                </hgroup>
+                <a id="slide-menu-button" class="topcoat-icon-button--large--quiet">
+                    <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+                </a>
+            </div>
+        </header>
+        <div ng-view>
+
+        </div> <!-- /ng-view -->
+    </div>
 </div>
 <!-- /wrapper -->
 <script type="text/javascript" src="cordova.js"></script>
@@ -27,6 +54,5 @@
 <script type="text/javascript">
     app.initialize();
 </script>
-<script src="http://192.168.1.8:8080/target/target-script-min.js#anonymous"></script>
 </body>
 </html>
