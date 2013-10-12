@@ -1,0 +1,19 @@
+<div id="content" class="max-width" ng-controller="HomeController" style="padding: 20px 0;">
+    <article id="search-input" class="component">
+        <section class="component">
+            <input type="search" value="" placeholder="search" class="topcoat-search-input" ng-model="query" style="width: 95%;margin-left:10px;">
+        </section>
+    </article>
+    <article id="list" class="component">
+        <section class="component">
+            <div class="topcoat-list__container">
+                <ul class="topcoat-list list">
+                    <li class="topcoat-list__item" ng-repeat="company in companies | filter:query">
+                        <h3>{{ company.name }}</h3>
+                        <span style="color: #58C0FF;" ng-click="showInAppBrowser(company.url);">{{ company.url }}</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </article>
+</div>
