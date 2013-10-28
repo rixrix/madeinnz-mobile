@@ -1,11 +1,17 @@
 function HomeController($scope, $http, $location, $rootScope) {
     $scope.init = function() {
-        var connection = navigator.connection.type;
-        if (connection == 'none') {
+        var connectionType = navigator.onLine || false;
+
+        if (typeof navigator.connection != "undefined") {
+            connectionType = navigator.connection.type
+        }
+
+        if (connectionType == 'none' || connectionType == false) {
             $scope.errorHandler();
         } else {
             $scope.getCompanies();
         }
+
     }
 
     $scope.getCompanies = function() {
@@ -27,6 +33,7 @@ function HomeController($scope, $http, $location, $rootScope) {
 
     $scope.errorHandler = function() {
         $location.path('/404');
+
     }
 
     $scope.init();
