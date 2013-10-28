@@ -11,4 +11,7 @@
     <access origin="*" />
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="true" />
+    <feature name="Network">
+        <param name="firefoxos-package" value="Network" />
+    </feature>
 </widget>
