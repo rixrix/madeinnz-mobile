@@ -28,7 +28,6 @@ function HomeController($scope, $http, $location, $rootScope) {
     }
 
     $scope.showInAppBrowser = function(url) {
-        console.log('XXX showInAppBrowser');
         window.open(url, '_blank', 'location=yes');
     }
 
