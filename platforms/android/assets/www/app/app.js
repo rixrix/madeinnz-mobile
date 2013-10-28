@@ -15,8 +15,8 @@ var mnzApp = angular.module('mnzApp', []).
         '$routeProvider',
         function($routeProvider) {
             $routeProvider.when('/', {templateUrl:'app/views/home/index.html', controller: HomeController});
-            $routeProvider.when('/about', {templateUrl:'app/views/home/about.html', controller: HomeController});
-            $routeProvider.when('/404', {templateUrl: 'app/views/error/404.html', controller: HomeController});
+            $routeProvider.when('/about', {templateUrl:'app/views/home/about.html'});
+            $routeProvider.when('/404', {templateUrl: 'app/views/error/404.html'});
             $routeProvider.otherwise({redirectTo:'/'});
         }
     ]);
